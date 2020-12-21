@@ -1,9 +1,6 @@
 package com.md.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Zipcode {
@@ -17,7 +14,8 @@ public class Zipcode {
     public Zipcode() {
     }
 
-    public Zipcode(int nr, String navn) {
+    public Zipcode(Long id, int nr, String navn) {
+        this.Id = id;
         this.nr = nr;
         this.navn = navn;
     }
@@ -45,4 +43,5 @@ public class Zipcode {
     public void setNavn(String navn) {
         this.navn = navn;
     }
+
 }
